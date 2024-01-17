@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Noto+Sans+JP:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;900&display=swap');
 
 html,
 body,
@@ -36,6 +36,8 @@ figure {
     padding-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
+    vertical-align: baseline;
+    text-align: left;
     box-sizing: border-box;
     letter-spacing: inherit;
     line-height: inherit;
@@ -57,17 +59,24 @@ address {
     font-style: normal;
 }
 
+table {
+    border-spacing: 0;
+}
+
 /* 文字体裁 */
 
 html,
 body {
+    height: 100%;
     letter-spacing: -0.02em;
     color: #000000;
-    font-family: "Inter", "Noto Sans JP", sans-serif;
+    font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 400;
     font-feature-settings: "calt", "clig", "kern", "liga", "locl", "rlig";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    line-height: 20px;
+    font-size: 15px;
 }
 
 .caption-text {
@@ -91,7 +100,7 @@ body {
 }
 
 .accentuate-text {
-    font-weight: 800;
+    font-weight: 900;
 }
 
 /* リンク */
@@ -140,18 +149,51 @@ body {
     color: rgba(255, 255, 255, 0.75);
 }
 
+.link-highlight {
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link-highlight:link,
+.link-highlight:visited {
+    color: #000000;
+}
+
+.link-highlight:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.link-highlight img {
+    filter: contrast(90%) brightness(110%);
+}
+
+.link-highlight:active {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.link-highlight img {
+    filter: contrast(75%) brightness(125%);
+}
+
+.link-highlight.dark:link,
+.link-highlight.dark:visited,
+.dark .link-highlight:link,
+.dark .link-highlight:visited {
+    color: #ffffff;
+}
+
+.link-highlight.dark:hover,
+.dark .link-highlight:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.link-highlight.dark:active,
+.dark .link-highlight:active {
+    color: rgba(255, 255, 255, 0.75);
+}
+
 /* レイアウト */
-
-.framework {
-    max-width: 320px;
-    min-height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.live-area {
-    padding: 60px 20px;
-}
 
 .stack-panel.horizontal {
     display: flex;
@@ -167,13 +209,15 @@ body {
     flex-wrap: wrap;
 }
 
+.stack-panel-item {
+    display: block;
+}
+
 .stretch-fit {
-    width: auto;
     flex: 0 0 auto;
 }
 
 .stretch-cover {
-    width: auto;
     flex: 1 1 auto;
 }
 
@@ -184,25 +228,115 @@ body {
 :root {
     --vertical-gap-0-5: 8px;
     --vertical-gap-1: 20px;
-    --vertical-gap-2: 64px;
-    --vertical-gap-3: 128px;
-  }
-  
-  .letterpress-compressed + .letterpress-compressed {
-    margin-top: 20px;
-  }
-  
-  .letterpress + .letterpress {
-    margin-top: 60px;
-  }
-  
-  .topic + .topic {
-    margin-top: 0px;
-  }
-  
-  /* */
+    --vertical-gap-2: 40px;
+    --vertical-gap-4: 80px;
+    --horizontal-gap-1: 1.04167vw;
+    --horizontal-gap-2: 4.166667vw;
+    --horizontal-gap-3: 6.25vw;
+    --column-width-1: 21.09375vw
+}
 
-#eyecatch {
-    background-color: #cccccc;
-    min-height: 50vh;
+.letterpress-compressed+.letterpress-compressed {
+    margin-top: 12px;
+}
+
+.letterpress+.letterpress {
+    margin-top: 20px;
+}
+
+.topic+.topic {
+    margin-top: 40px;
+}
+
+.framework {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: var(--vertical-gap-2);
+}
+
+@media screen and (min-width: 801px) {
+    .framework{
+        padding-top: var(--vertical-gap-4);
+        padding-bottom: var(--vertical-gap-1);
+        padding-left: var(--horizontal-gap-3);
+        padding-right: var(--horizontal-gap-3);
+    }
+}
+
+.framework>header {
+    flex: 0 0 auto;
+}
+
+.framework>main {
+    flex: 1 1 auto;
+}
+
+.framework>footer {
+    flex: 0 0 auto;
+}
+
+/* logo */
+
+.logo>a {
+    display: flex;
+    flex-flow: row;
+}
+
+.logo>.icon {
+    flex: 0 0 68px;
+}
+
+/* main */
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: var(--vertical-gap-4);
+    column-gap: var(--horizontal-gap-1);
+}
+
+@media screen and (min-width: 801px) {
+    main {
+        flex-flow: row nowrap;
+    }
+
+    .nav {
+        flex: 0 0 var(--column-width-1);
+    }
+
+    .profile {
+        margin-left: auto;
+        flex: 0 0 var(--column-width-1);
+    }
+}
+
+.shift-by-logo {
+    margin-left: 68px;
+}
+
+.destination-of-hikari {
+    padding-bottom: calc(var(--vertical-gap-2) - 1px);
+    border-bottom: 1px solid #000;
+}
+
+.stack-panel.profile-details {
+    column-gap: 40px;
+}
+
+table.data tr th,
+table.data tr td {
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+table.data tr:first-child th,
+table.data tr:first-child td {
+    padding-top: 0;
+    padding-right: 0;
 }
