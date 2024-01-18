@@ -11,7 +11,7 @@ layout: nav
     <ul class="separated">
         {% for post in site.posts %}
         <li class="letterpress">
-            <article><a href="{{ post.url }}" class="link-highlight accentuate-text">{{ post.title }}</a><br/>{{ post.category | upcase }}<br/><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></article>
+            <article><a href="{{ post.url }}" class="link-highlight accentuate-text">{{ post.title }}</a><br/>{{ post.category | upcase }}<br/><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y/%m/%d" }}</time></article>
         </li>
         {% endfor %}
     </ul>

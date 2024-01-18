@@ -6,7 +6,7 @@ layout: nav
     <header class="separated">
         <h1 class="accentuate-text">{{ page.title }}</h1>
         <p>{{ page.category | upcase }}</p>
-        <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time></p>
+        <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y/%m/%d" }}</time></p>
     </header>
     <div class="separated markdown">
         {{ content }}
