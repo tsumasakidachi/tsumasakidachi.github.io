@@ -67,6 +67,10 @@ ul {
     list-style-type: "・";
 }
 
+code {
+    font-family: "Consolas", monospace;
+}
+
 /* 文字体裁 */
 
 html,
