@@ -1,0 +1,14 @@
+---
+layout: nav
+---
+
+<article class="content">
+    <header class="separated">
+        <h1 class="accentuate-text">{{ page.title }}</h1>
+        <p>{{ page.category | upcase }}</p>
+        <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time></p>
+    </header>
+    <div class="separated markdown">
+        {{ content }}
+    </div>
+</article>

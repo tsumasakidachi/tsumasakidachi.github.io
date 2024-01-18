@@ -1,0 +1,18 @@
+---
+title: "NOTES"
+layout: nav
+---
+
+<article class="content">
+    <header class="separated">
+    <h1 class="accentuate-text">NOTES</h1>
+    <p>覚えておく事・気になった事・共有する事</p>
+    </header>
+    <ul class="separated">
+        {% for post in site.posts %}
+        <li class="letterpress">
+            <article><a href="{{ post.url }}" class="link-highlight accentuate-text">{{ post.title }}</a><br/>{{ post.category | upcase }}<br/><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></article>
+        </li>
+        {% endfor %}
+    </ul>
+</article>

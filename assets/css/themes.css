@@ -63,6 +63,10 @@ table {
     border-spacing: 0;
 }
 
+ul {
+    list-style-type: "・";
+}
+
 /* 文字体裁 */
 
 html,
@@ -248,6 +252,10 @@ body {
     margin-top: 40px;
 }
 
+.separated+.separated {
+    margin-top: 80px;
+}
+
 .framework {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -314,6 +322,10 @@ main {
         margin-left: auto;
         flex: 0 0 var(--column-width-1);
     }
+
+    .content {
+        flex: 0 1 calc(var(--column-width-1) * 2 + var(--horizontal-gap-1))
+    }
 }
 
 .shift-by-logo {
@@ -339,4 +351,25 @@ table.data tr:first-child th,
 table.data tr:first-child td {
     padding-top: 0;
     padding-right: 0;
+}
+
+/* markdown elements */
+
+.markdown > * + * {
+    margin-top: 20px;
+}
+
+.markdown > * + h1,
+.markdown > * + h2,
+.markdown > * + h3,
+.markdown > * + h4,
+.markdown > * + h5,
+.markdown > * + h6 {
+    margin-top: 60px;
+    font-weight: bold;
+}
+
+.markdown > ul,
+.markdown > ol {
+    margin-left: 1em;
 }
