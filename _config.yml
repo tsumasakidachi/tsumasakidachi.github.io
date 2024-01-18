@@ -29,7 +29,6 @@ permalink: /:categories/:year-:month-:day-:title
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-minifier
   - jekyll-sitemap
 
 locale: "ja_JP"
