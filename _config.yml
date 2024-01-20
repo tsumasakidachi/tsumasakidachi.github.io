@@ -22,7 +22,7 @@ title: つま先立ちで未来へ歩む
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tsumasakidachi.com" # the base hostname & protocol for your site, e.g. http://example.com
-permalink: /:categories/:year-:month-:day-:title
+permalink: /note/:year-:month-:day-:title
 
 # Build settings
 # theme: minima
