@@ -68,14 +68,13 @@ ul {
 }
 
 code {
-    font-family: "Consolas", monospace;
+    font-family: "Consolas", "Meiryo", monospace;
 }
 
 /* 文字体裁 */
 
 html,
 body {
-    height: 100%;
     letter-spacing: -0.02em;
     color: #000000;
     font-family: "Zen Kaku Gothic New", sans-serif;
@@ -265,8 +264,7 @@ body {
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-flow: column nowrap;
     row-gap: var(--vertical-gap-2);
@@ -373,37 +371,59 @@ table.data tr:first-child td {
     font-weight: bold;
 }
 
-.markdown > ul,
-.markdown > ol {
+.markdown ul,
+.markdown ol {
     margin-left: 1em;
 }
 
-.markdown > table {
+.markdown table {
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.markdown > table th,
-.markdown > table td {
+.markdown table:first-child {
+    margin-top: 0;
+}
+
+.markdown table:last-child {
+    margin-bottom: 0;
+}
+
+.markdown table th,
+.markdown table td {
     padding-left: 2em;
     padding-top: var(--vertical-gap-1);
     padding-bottom: calc(var(--vertical-gap-1) - 1px);
-    min-width: 6em;
     border-top: 1px solid #000000;
 }
 
-.markdown > table th:first-child,
-.markdown > table td:first-child {
+@media screen and (min-width: 801px) {
+    .markdown table th,
+    .markdown table td {
+        padding-left: 4em;
+    }
+} 
+
+.markdown table th:first-child,
+.markdown table td:first-child {
     padding-left: 0px;
+    white-space: nowrap;
 }
 
-.markdown > table tr:first-child th,
-.markdown > table tr:first-child td {
+.markdown table tr:first-child th,
+.markdown table tr:first-child td {
     padding-top: 0px;
     border-top-width: 0px;
 }
 
-.markdown > table tr:last-child th,
-.markdown > table tr:last-child td {
+.markdown table tr:last-child th,
+.markdown table tr:last-child td {
     padding-bottom: 0px;
+}
+
+.markdown code {
+    padding: 0px 0.25em;
+    display: inline-block;
+    background-color: #f0f0f0;
+    font-size: 12px;
 }
