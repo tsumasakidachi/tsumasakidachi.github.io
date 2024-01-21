@@ -25,7 +25,8 @@ th,
 td,
 img,
 address,
-figure {
+figure,
+blockquote {
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
@@ -69,6 +70,10 @@ code {
     font-family: "Consolas", "Murecho", monospace;
 }
 
+blockquote {
+    font-family: "Murecho", sans-serif
+}
+
 /* 文字体裁 */
 
 html,
@@ -76,29 +81,19 @@ body {
     color: #404040;
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: 20px;
+    letter-spacing: -0.025em;
+    line-height: var(--line-height-1);
+    font-size: 15px;
+}
+
+.body-text {
+    line-height: var(--line-height-1);
     font-size: 15px;
 }
 
 .caption-text {
-    line-height: 16px;
+    line-height: var(--line-height-0-5);
     font-size: 12px;
-}
-
-.body-text {
-    line-height: 20px;
-    font-size: 15px;
-}
-
-.subtitle-text {
-    line-height: 24px;
-    font-size: 18px;
-}
-
-.title-text {
-    line-height: 28px;
-    font-size: 22.5px
 }
 
 .accentuate-text {
@@ -175,26 +170,23 @@ a.navigation-highlight:visited:active {
 }
 
 :root {
-    --vertical-gap-0-5: 8px;
-    --vertical-gap-1: 20px;
-    --vertical-gap-2: 40px;
-    --vertical-gap-4: 80px;
-    --horizontal-gap-1: 1.04167vw;
-    --horizontal-gap-2: 4.166667vw;
-    --horizontal-gap-3: 6.25vw;
-    --column-width-1: 21.09375vw
+    --line-height-0-5: 20px;
+    --line-height-1: 24px;
+    --line-height-2: 48px;
+    --line-height-4: 96px;
+    --column-width-1: calc((100vw - 22em) / 4);
 }
 
 .letterpress-compressed+.letterpress-compressed {
-    margin-top: 12px;
+    margin-top: var(--line-height-0-5);
 }
 
 .letterpress+.letterpress {
-    margin-top: 20px;
+    margin-top: var(--line-height-1);
 }
 
 .topic+.topic {
-    margin-top: 40px;
+    margin-top: var(--line-height-2);
 }
 
 .separated+.separated {
@@ -202,22 +194,22 @@ a.navigation-highlight:visited:active {
 }
 
 .framework {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: var(--line-height-1);
+    padding-bottom: var(--line-height-1);
+    padding-left: 1em;
+    padding-right: 1em;
     min-height: 100vh;
     display: flex;
     flex-flow: column nowrap;
-    row-gap: var(--vertical-gap-2);
+    row-gap: var(--line-height-2);
 }
 
 @media screen and (min-width: 801px) {
     .framework{
-        padding-top: var(--vertical-gap-4);
-        padding-bottom: var(--vertical-gap-1);
-        padding-left: var(--horizontal-gap-3);
-        padding-right: var(--horizontal-gap-3);
+        padding-top: var(--line-height-4);
+        padding-bottom: var(--line-height-1);
+        padding-left: 8em;
+        padding-right: 8em;
     }
 }
 
@@ -249,8 +241,8 @@ a.navigation-highlight:visited:active {
 main {
     display: flex;
     flex-flow: column nowrap;
-    row-gap: var(--vertical-gap-4);
-    column-gap: var(--horizontal-gap-1);
+    row-gap: var(--line-height-4);
+    column-gap: 2em;
 }
 
 @media screen and (min-width: 801px) {
@@ -268,7 +260,7 @@ main {
     }
 
     .content {
-        flex: 0 1 calc(var(--column-width-1) * 2 + var(--horizontal-gap-1))
+        flex: 0 1 calc(var(--column-width-1) * 2 + 2em)
     }
 }
 
@@ -277,18 +269,18 @@ main {
 }
 
 .destination-of-hikari {
-    padding-bottom: calc(var(--vertical-gap-2) - 1px);
+    padding-bottom: calc(var(--line-height-2) - 1px);
     border-bottom: 1px solid #000;
 }
 
 .stack-panel.profile-details {
-    column-gap: 40px;
+    column-gap: 2em;
 }
 
 table.data tr th,
 table.data tr td {
-    padding-top: 20px;
-    padding-right: 20px;
+    padding-top: var(--line-height-1);
+    padding-right: var(--line-height-1);
 }
 
 table.data tr:first-child th,
@@ -300,7 +292,7 @@ table.data tr:first-child td {
 /* markdown elements */
 
 .markdown > * + * {
-    margin-top: 20px;
+    margin-top: var(--line-height-1);
 }
 
 .markdown > * + h1,
@@ -309,7 +301,7 @@ table.data tr:first-child td {
 .markdown > * + h4,
 .markdown > * + h5,
 .markdown > * + h6 {
-    margin-top: 40px;
+    margin-top: var(--line-height-2);
     font-weight: bold;
 }
 
@@ -319,8 +311,8 @@ table.data tr:first-child td {
 }
 
 .markdown table {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: var(--line-height-2);
+    margin-bottom: var(--line-height-2);
 }
 
 .markdown table:first-child {
@@ -334,8 +326,8 @@ table.data tr:first-child td {
 .markdown table th,
 .markdown table td {
     padding-left: 2em;
-    padding-top: var(--vertical-gap-1);
-    padding-bottom: calc(var(--vertical-gap-1) - 1px);
+    padding-top: var(--line-height-1);
+    padding-bottom: calc(var(--line-height-1) - 1px);
     border-top: 1px solid #000000;
 }
 
@@ -364,8 +356,5 @@ table.data tr:first-child td {
 }
 
 .markdown code {
-    padding: 0px 0.25em;
-    display: inline-block;
-    background-color: #f0f0f0;
-    font-size: 12px;
+    color: #000000;
 }
