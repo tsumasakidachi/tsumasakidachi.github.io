@@ -228,13 +228,22 @@ a.navigation-highlight:visited:active {
 
 /* logo */
 
-.logo>a {
-    display: flex;
+.logo {
+    display: inline-flex;
     flex-flow: row;
+    column-gap: 1em;
 }
 
 .logo>.icon {
-    flex: 0 0 68px;
+    flex: 0 0 auto;
+}
+
+.logo>.title {
+    flex: 0 0 auto;
+}
+
+.shift-by-logo {
+    margin-left: calc(48px + 1em);
 }
 
 /* main */
@@ -268,10 +277,6 @@ main {
     .content {
         flex: 0 1 calc(var(--column-width-1) * 2 + 2em)
     }
-}
-
-.shift-by-logo {
-    margin-left: 68px;
 }
 
 .destination-of-hikari {
@@ -367,4 +372,8 @@ table.data tr td:first-child {
 
 .markdown code {
     color: #000000;
+}
+
+.markdown img {
+    max-width: 100%;
 }
