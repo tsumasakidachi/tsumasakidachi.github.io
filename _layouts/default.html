@@ -8,17 +8,22 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
         <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@100..900&family=Zen+Kaku+Gothic+Antique:wght@400;900&display=swap" rel="stylesheet">
         <link href="/assets/css/normalize.css" rel="stylesheet">
-        <link href="/assets/css/themes.css" rel="stylesheet">
-        {% seo %}
+        <link href="/assets/css/themes.css" rel="stylesheet"> {% seo %} <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CD1MPB08TW"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-CD1MPB08TW');
+        </script>
     </head>
 
     <body>
         <div class="framework">
             <header>
                 <h1 class="accentuate-text"><a href="{{ site.url }}" class="navigation-highlight horizontal logo"><span class="icon"><img src="/assets/img/tsu.png" width="48" height="20" alt="" /></span><span class="title">つま先立ちで<br />未来へ歩む</span></a></h1>
-            </header>
-            {{ content }}
-            <footer>
+            </header> {{ content }} <footer>
                 <p class="copyright caption-text">&copy; project tsumasakidachi</p>
             </footer>
         </div>
