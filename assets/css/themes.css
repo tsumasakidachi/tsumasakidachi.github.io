@@ -277,7 +277,7 @@ main {
     margin-top: auto;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 800px) {
     main {
         flex-flow: row nowrap;
     }
