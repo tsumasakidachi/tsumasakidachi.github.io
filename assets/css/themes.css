@@ -345,15 +345,10 @@ table.data tr td:first-child {
 
 .markdown table {
     margin-top: calc(var(--line-height-1) * 2);
-    margin-bottom: calc(var(--line-height-1) * 2);
 }
 
-.markdown table:first-child {
-    margin-top: 0;
-}
-
-.markdown table:last-child {
-    margin-bottom: 0;
+.markdown table + * {
+    margin-top: calc(var(--line-height-1) * 2);
 }
 
 .markdown table th,
@@ -364,8 +359,7 @@ table.data tr td:first-child {
     border-top: 1px solid #000000;
 }
 
-@media screen and (min-width: 801px) {
-
+@media screen and (min-width: 800px) {
     .markdown table th,
     .markdown table td {
         padding-left: 4em;
