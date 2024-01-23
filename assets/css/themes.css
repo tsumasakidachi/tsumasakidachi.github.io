@@ -343,14 +343,6 @@ table.data tr td:first-child {
     margin-left: 1em;
 }
 
-.markdown table {
-    margin-top: calc(var(--line-height-1) * 2);
-}
-
-.markdown table + * {
-    margin-top: calc(var(--line-height-1) * 2);
-}
-
 .markdown table th,
 .markdown table td {
     padding-left: 2em;
