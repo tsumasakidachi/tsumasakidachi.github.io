@@ -3,24 +3,27 @@ title: "NOTES"
 layout: nav
 ---
 
-<article class="content">
-    <header class="separated">
-    <h1><span class="accentuate-text">NOTES</span><br/>TO SHARE, REMEMBER, OR INTERESTS</h1>
-    </header>
-    <ul class="separated">
-        {% for post in site.posts %}
-        <li class="letterpress">
-            <article><a href="{{ post.url }}" class="link-highlight accentuate-text">{{ post.title }}</a><br/>{{ post.category | upcase }}<br/><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y/%m/%d" }}</time></article>
-        </li>
-        {% endfor %}
-    </ul>
-    <footer class="separated">
-        <div class="ad">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8562449254433662" crossorigin="anonymous"></script>
-            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8562449254433662" data-ad-slot="9618575340"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </footer>
-</article>
+<main>
+    <article class="separated">
+        <header class="separated">
+        <h1><span class="accentuate-text">NOTES</span><br/>TO SHARE, REMEMBER, OR INTERESTS</h1>
+        </header>
+        <ul class="separated">
+            {% for post in site.posts %}
+            <li class="letterpress">
+                <article>
+                    <h1><a href="{{ post.url }}" class="link-highlight accentuate-text">{{ post.title }}</a></h1>
+                    <p>{{ post.category | upcase }}<br/><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y/%m/%d" }}</time></p>
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+    </article>
+    <div class="ad separated">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8562449254433662" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8562449254433662" data-ad-slot="9618575340"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</main>
