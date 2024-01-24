@@ -1,5 +1,5 @@
 ---
-title: "せこい金策に頼らずに真面目に農業して効率的に金を稼ぐには？"
+title: "せこい金策に頼らず真面目に農業して効率的に金を稼ぐには？"
 category: "farming simulator"
 author: "ツマサキダチ"
 layout: "post"
