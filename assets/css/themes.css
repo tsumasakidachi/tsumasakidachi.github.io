@@ -299,22 +299,6 @@ main {
     column-gap: 2em;
 }
 
-table.data tr th,
-table.data tr td {
-    padding-top: var(--line-height-1);
-    padding-left: 1em;
-}
-
-table.data tr:first-child th,
-table.data tr:first-child td {
-    padding-top: 0;
-}
-
-table.data tr th:first-child,
-table.data tr td:first-child {
-    padding-left: 0;
-}
-
 /* markdown elements */
 
 .markdown>*+* {
@@ -331,11 +315,15 @@ table.data tr td:first-child {
     font-weight: bold;
 }
 
+ul.indented,
+ol.indented,
 .markdown ul,
 .markdown ol {
     margin-left: 1em;
 }
 
+table.data th,
+table.data td,
 .markdown table th,
 .markdown table td {
     padding-left: 2em;
@@ -345,25 +333,32 @@ table.data tr td:first-child {
 }
 
 @media screen and (min-width: 800px) {
-
+    table.data th,
+    table.data td,
     .markdown table th,
     .markdown table td {
         padding-left: 4em;
     }
 }
 
+table.data th:first-child,
+table.data td:first-child,
 .markdown table th:first-child,
 .markdown table td:first-child {
     padding-left: 0px;
     white-space: nowrap;
 }
 
+table.data tr:first-child th,
+table.data tr:first-child td,
 .markdown table tr:first-child th,
 .markdown table tr:first-child td {
     padding-top: 0px;
     border-top-width: 0px;
 }
 
+table.data tr:last-child th,
+table.data tr:last-child td,
 .markdown table tr:last-child th,
 .markdown table tr:last-child td {
     padding-bottom: 0px;
