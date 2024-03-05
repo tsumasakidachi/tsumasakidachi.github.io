@@ -327,8 +327,14 @@ table.data td,
 .markdown table th,
 .markdown table td {
     padding-left: 2em;
-    padding-top: var(--line-height-1);
     padding-bottom: calc(var(--line-height-1) - 1px);
+}
+
+table.data.bordered th,
+table.data.bordered td,
+.markdown table th,
+.markdown table td {
+    padding-top: var(--line-height-1);
     border-top: 1px solid #000000;
 }
 
@@ -349,8 +355,8 @@ table.data td:first-child,
     white-space: nowrap;
 }
 
-table.data tr:first-child th,
-table.data tr:first-child td,
+table.data.bordered tr:first-child th,
+table.data.bordered tr:first-child td,
 .markdown table tr:first-child th,
 .markdown table tr:first-child td {
     padding-top: 0px;
