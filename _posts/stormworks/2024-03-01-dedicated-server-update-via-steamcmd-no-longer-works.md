@@ -1,5 +1,5 @@
 ---
-title: "steamcmd を使った専用サーバの更新ができなくなり Steam クライアントに統合されました"
+title: "steamcmd を使った Stormworks 専用サーバの更新ができなくなりました"
 category: "stormworks"
 author: "ツマサキダチ"
 layout: "post"
