@@ -21,6 +21,7 @@
                     <!-- <div class="letterpress"><img src="https://imagedelivery.net/4msCx1LmgaFWheG_H8nJQQ/12191a30-8a9b-49c4-f1df-38a5493f3100/post" class="stretch" alt="" width="784" height="477"/></div> -->
                     <li>追加したロケーションの編集画面を開き、病院を設定する場所にゾーンを配置し、位置・向き・サイズを目的の建物等の形状に合わせて整えます。</li>
                     <li>配置したゾーンのプロパティを開き、<strong><code>Tags</code> に <code>landscape=hospital</code> を追加します</strong>。マップへの表示はスクリプトによって行われるため <code>Show on map</code> をチェックする必要はありません。</li>
+                    <li>Display Name を入力します。これはマップに表示されます。何も入力しない場合は <code>landscape</code> タグの値が使用されます。</li>
                 </ol>
                 <p class="letterpress">以上で病院の設定は完了です。以下の画像に例を示します。</p>
                 <div class="letterpress"><img src="/assets/img/tsu-mission-foundation-set-hospital.png" class="stretch" alt="" width="784" height="495" /></div>
@@ -38,7 +39,7 @@
                 <h1 class="letterpress accentuate-text">要救助者の追加</h1>
                 <p class="letterpress">作成したミッション ロケーションに要救助者を追加します。要救助者は達成目標としてスクリプトによって追跡され、病院へ到着した時にデスポーンし、報酬が計上されます。</p>
                 <ol class="letterpress indented">
-                    <li>作成したミッション ロケーションの編集画面を開き、要救助者を配置したい場所に移動します。</li>
+                    <li>作成したミッション ロケーションの編集画面を開き、要救助者を配置する場所に移動します。</li>
                     <li>好きなだけキャラクターを配置します。</li>
                     <li>要救助者として取り扱うキャラクターのプロパティを開き、<strong><code>Tags</code> に <code>tracker=rescuee</code> を追加します</strong>。駆け付けた警官や野次馬など病院へ搬送する必要のないモブにはタグを付けません。</li>
                 </ol>
