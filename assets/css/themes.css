@@ -70,7 +70,7 @@ code {
 }
 
 blockquote {
-    font-family: "Murecho", sans-serif
+    font-family: "Murecho", sans-serif;
 }
 
 /* 文字体裁 */
@@ -181,7 +181,7 @@ a.navigation-highlight:visited:active {
 }
 
 .letterpress-compressed+.letterpress-compressed {
-    margin-top: var(--line-height-0-5);
+    margin-top: calc(var(--line-height-1) * 0.5);
 }
 
 .letterpress+.letterpress {
@@ -370,8 +370,14 @@ table.data tr:last-child td,
     padding-bottom: 0px;
 }
 
-.markdown code {
-    color: #000000;
+code {
+    padding: 2px;
+    background-color: #f0f0f0;
+}
+
+pre {
+    padding: calc(var(--line-height-1) * 0.5);
+    background-color: #f0f0f0;
 }
 
 img.stretch,
