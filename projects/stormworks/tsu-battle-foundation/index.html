@@ -17,7 +17,7 @@ layout: nav
                 <h1 class="letterpress accentuate-text">機能</h1>
                 <ul class="letterpress indented">
                     <li><span class="accentuate-text">チーム割の自動化</span> 参加者を均等に 2 個のチームに割り振ります</li>
-                    <li><span class="accentuate-text">マルチマップ</span> リスポーン地点となるワークベンチと行動エリアがプリセットとして複数用意されており、対戦ごとに使う場所を変更できます。アドオンを作成して独自のバトルフィールドを用意することもできます。プレイヤーは各自のチームのワークベンチにリスポーンします</li>
+                    <li><span class="accentuate-text">マルチマップ</span> リスポーン地点となるワークベンチと行動エリアがプリセットとして複数用意されており、対戦ごとに使う戦場を変更できます。アドオンを作成して独自の戦場を用意することもできます。プレイヤーは各自のチームのワークベンチにリスポーンします</li>
                     <li>
                         <p><span class="accentuate-text">戦術マップ</span> マップに味方のプレイヤーと乗り物の位置が表示されます。アイコンはマップアイコンブロックに次の文字列 (大文字小文字問わず) を含めることで変更できます</p>
                         <ul class="indented">
@@ -25,6 +25,8 @@ layout: nav
                             <li>装甲車: <code>[TANK]</code></li>
                             <li>回転翼機: <code>[HELI]</code></li>
                             <li>固定翼機: <code>[PLANE]</code></li>
+                            <li>小型船: <code>[BOAT]</code></li>
+                            <li>大型船: <code>[SHIP]</code></li>
                         </ul>
                     </li>
                 </ul>
@@ -33,19 +35,20 @@ layout: nav
                 <h1 class="letterpress accentuate-text">一般的な使い方</h1>
                 <ol class="letterpress indented">
                     <li>[管理者] TSU Battle Foundation、TSU Battle Locations を有効にして新しいゲームを作成します</li>
-                    <li>[管理者] 新しい対戦を開始するには <code>?battle init mode=common map=&lt;map id&gt;</code>を入力してください。自動でチーム割が行われます</li>
-                    <li>チームの準備が完了したら代表者 1 人 (誰でもいい) がコマンド <code>?ready</code> を入力してください</li>
+                    <li>[管理者] 新しい対戦を開始するには <code>?battle init map=&lt;MapID&gt;</code>を入力します。自動でチーム割が行われ参加者が拠点にテレポートされます</li>
+                    <li>チームの準備が完了したら代表者 1 人 (誰でもいい) がコマンド <code>?ready</code> を入力します。取り消す場合はコマンド <code>?wait</code> を入力します</li>
                     <li>両チームの準備が完了したら対戦が開始されます</li>
-                    <li>自分の乗り物が行動不能になったらコマンド <code>?kill</code> を入力してください。拠点にリスポーンすると同時に乗り物が消去されます</li>
-                    <li>リスポーンしたら乗り物を出して再出撃するか、コマンド <code>?tp &lt;vehicle id&gt;</code> を入力してチームの乗り物にテレポートできます。<code>vehicle id</code> はマップに表示されます</li>
+                    <li>自分の乗り物が行動不能になったらコマンド <code>?kill</code> を入力します。拠点にリスポーンすると同時に乗り物が消去されます</li>
+                    <li>リスポーンしたら乗り物を出して再出撃するか、コマンド <code>?tp &lt;VehicleID&gt;</code> を入力してチームの乗り物にテレポートできます。<code>VehicleID</code> はマップに表示されます</li>
                     <li>[管理者] 勝敗が決したらコマンド <code>?battle clear</code> で対戦を消去します</li>
                 </ol>
             </section>
             <section class="topic">
-                <h1 class="letterpress accentuate-text">既成のマップ</h1>
+                <h1 class="letterpress accentuate-text">マップ</h1>
+                <p class="letterpress">TSU Battle Locations に収録されているマップを列挙します。</p>
                 <table class="letterpress data bordered">
                     <tr>
-                        <td>map id</td>
+                        <td>MapID</td>
                         <td>名前</td>
                         <td>拠点</td>
                         <td>概要</td>
