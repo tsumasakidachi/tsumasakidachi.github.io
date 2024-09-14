@@ -67,6 +67,7 @@ ul {
 
 code {
     font-family: "Cascadia Code", "Courier New", "Murecho", monospace;
+    word-break: keep-all;
 }
 
 blockquote {
