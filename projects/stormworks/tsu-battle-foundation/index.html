@@ -36,12 +36,14 @@ layout: nav
                 <h1 class="letterpress accentuate-text">一般的な使い方</h1>
                 <ol class="letterpress indented">
                     <li>[管理者] TSU Battle Foundation、TSU Battle Locations を有効にして新しいゲームを作成します</li>
-                    <li>[管理者] 新しい対戦を開始するには <code>?battle init map=&lt;MapID&gt;</code>を入力します。自動でチーム割が行われ参加者が拠点にテレポートされます</li>
-                    <li>チームの準備が完了したら代表者 1 人 (誰でもいい) がコマンド <code>?ready</code> を入力します。取り消す場合はコマンド <code>?wait</code> を入力します</li>
+                    <li>[管理者] <code>?battle init map=&lt;MapID&gt;</code> で新しい対戦を開始します。自動でチーム割が行われ参加者が拠点にテレポートされます</li>
+                    <li><code>?ticket &lt;+Amount&gt;</code> でチームの初期チケットを設定します。これは代表者 1 人 (誰でもいい) が行います
+                    <li><code>?ready</code> でチームの準備完了を通知します。取り消す場合は <code>?wait</code> を入力します</li>。これは代表者 1 人 (誰でもいい) が行います
                     <li>両チームの準備が完了したら対戦が開始されます</li>
-                    <li>自分の乗り物が行動不能になったらコマンド <code>?kill</code> を入力します。拠点にリスポーンすると同時に乗り物が消去されます</li>
-                    <li>リスポーンしたら乗り物を出して再出撃するか、コマンド <code>?tp &lt;VehicleID&gt;</code> を入力してチームの乗り物にテレポートできます。<code>VehicleID</code> はマップに表示されます</li>
-                    <li>[管理者] 勝敗が決したらコマンド <code>?battle clear</code> で対戦を消去します</li>
+                    <li><code>?kill</code> で拠点にリスポーンすると同時に乗り物が消去されます。行動不能になった時に使います</li>
+                    <li><code>?ticket &lt;-Amount&gt;</code> でチームのチケットを減算します</code>
+                    <li><code>?tp &lt;VehicleID&gt;</code> でチームの乗り物にテレポートできます。<code>VehicleID</code> はマップに表示されます。これを行うには基地の中にいる必要があります</li>
+                    <li>[管理者] <code>?battle clear</code> で対戦を消去します。全てのプレイヤーが初期スポーン地点に戻され、全ての乗り物が消去されます</li>
                 </ol>
             </section>
             <section class="topic">
