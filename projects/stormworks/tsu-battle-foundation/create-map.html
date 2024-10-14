@@ -1,0 +1,78 @@
+---
+title: "TSU Battle Foundation"
+layout: nav
+---
+<main>
+    <article class="separated">
+        <header class="separated">
+            <h1 class="accentuate-text">カスタムマップの作成</h1>
+            <p>マップの作成について解説します。<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3332752277">TSU Battle Locations</a> を参考にすることもできます。</p>
+        </header>
+        <div class="separated">
+            <section class="topic">
+                <h1 class="letterpress accentuate-text">開始</h1>
+                <ol class="letterpress indented">
+                    <li>マップの ID を決めます。これは小文字の単語構成文字 (半角英数字とアンダースコア) のみで構成され、かつ他の全てのマップに対して一意である必要があります。例: <code>holt_bridge</code></li>
+                    <li>マップの設定を収録するための空のアドオンを作成します。</li>
+                    <li>ひとつのマップを構成するにあたり必要な「赤チームの拠点」「青チームの拠点」「戦闘域」を追加します。次の節以降で説明します。</li>
+                </ol>
+            </section>
+            <section class="topic">
+                <h1 class="letterpress accentuate-text">拠点の作成: リスポーン地点の設定</h1>
+                <p class="letterpress">赤チームの拠点を作成します。最初にリスポーン地点を設定します。</p>
+                <ol class="letterpress indented">
+                    <li>赤チームの拠点となるワークベンチを決め、そのタイルのロケーションを <code>ENVIRONMENT MODS</code> に追加します。</li>
+                    <li>スポーン地点となる場所にゾーンを追加します。試合中はプレイヤーはこのゾーンの中心にリスポーンします。</li>
+                    <li>追加したゾーンのプロパティを開き、タグに <code>map=&lt;MapID&gt;,landscape=spawn,team=red</code>を追加します。<code>&lt;MapID&gt;</code> は先に決めたマップ ID で置き換えます。</li>
+                </ol>
+                <p class="letterpress"><img src="/assets/img/tsu-battle-foundation-add-spawn-zone.png" alt="" width="784" height="408"></p>
+            </section>
+            <section class="topic">
+                <h1 class="letterpress accentuate-text">拠点の作成: 装備品ストレージの設定</h1>
+                <p class="letterpress">次に装備品ストレージのスポーン地点を設定します。</p>
+                <ol class="letterpress indented">
+                    <li>装備品ストレージのスポーン地点にゾーンを追加します。</li>
+                    <li>装備品ストレージはその底面の中心がゾーンの中心に来るように配置されるため、ゾーンの中心を地面と同じ高さになるように調整します。</li>
+                    <li>追加したゾーンのプロパティを開き、タグに <code>map=&lt;MapID&gt;,landscape=storage</code>を追加します。<code>&lt;MapID&gt;</code> は先に決めたマップ ID で置き換えます。</li>
+                </ol>
+                <p class="letterpress"><img src="/assets/img/tsu-battle-foundation-add-storage.png" alt="" width="784" height="438"></p>
+            </section>
+            <section class="topic">
+                <h1 class="letterpress accentuate-text">拠点の作成: 青チームの拠点</h1>
+                <p class="letterpress">これで赤チームの拠点が設定できました。続いて青チームの拠点があるタイルのロケーションを ENVIRONMENT MODS に追加し、「拠点の作成: リスポーン地点の設定」と「拠点の作成: 装備品ストレージの設定」の内容を <code>team=red</code> を <code>team=blue</code> に読み替えて再度行います。</p>
+            </section>
+            <section class="topic">
+                <h1 class="letterpress accentuate-text">戦闘域の設定</h1>
+                <p class="letterpress">戦闘域 (ゲームの地図に描画される白い円) の設定を追加します</p>
+                <ol class="letterpress indented">
+                    <li>地図を開き戦闘域の中心座標を決めます。</li>
+                    <li>アドオンエディタに戻り、その場所があるタイルのロケーションを ENVIRONMENT MODS に追加します。</li>
+                    <li>その場所にゾーンを追加します。</li>
+                    <li>追加したゾーンのプロパティを開き、タグに <code>map=&lt;MapID&gt;,landscape=center,radius=&lt;Radius&gt;</code> を追加します。<code>&lt;MapID&gt;</code> は先に決めたマップ ID に、<code>&lt;Radius&gt;</code> は戦闘域の半径となる整数で置き換えます。</li>
+                </ol>
+                <p class="letterpress"><img src="/assets/img/tsu-battle-foundation-add-op-area.png" alt="" width="784" height="411"></p>
+            </section>
+            <section class="topic">
+                <h1 class="letterpress accentuate-text">動作確認</h1>
+                <p class="letterpress">これで設定が完了しました。「一般的な使い方」の内容に従ってゲームを作成し、マップが正常に機能しているか確認します。設定に失敗している場合は次のいずれかのエラーが表示されます。</p>
+                <ul class="letterpress indented">
+                    <li>Red base zone is invalid: 赤チームの拠点が正しく設定されていません。「拠点の作成: リスポーン地点の設定」を見直してください。</li>
+                    <li>Blue base zone is invalid: 青チームの拠点が正しく設定されていません。「拠点の作成: リスポーン地点の設定」を見直してください。</li>
+                    <li>Operation zone center is invalid: 戦闘域のゾーンが正しく設定されていません。「戦闘域の設定」を見直してください。</li>
+                    <li>Operation zone radius is not number: 戦闘域の半径が正しく設定されていません。「戦闘域の設定」を見直してください。</li>
+                </ul>
+            </section>
+            <section class="topic">
+                <h1 class="letterpress accentuate-text">他のマップの追加</h1>
+                <p class="letterpress">他のマップを追加するには同じアドオンに同じ手順を繰り返し行います。<code>&lt;MapID&gt;</code> が重複しない限り追加できます。</p>
+            </section>
+        </div>
+    </article>
+    <div class="ad separated">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8562449254433662" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8562449254433662" data-ad-slot="9618575340"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</main>
