@@ -12,8 +12,8 @@ layout: nav
             <section class="topic">
                 <h1 class="letterpress accentuate-text">開始</h1>
                 <ol class="letterpress indented">
+                    <li>マップを収録するための新規アドオンを作成します。</li>
                     <li>マップの ID を決めます。これは小文字の単語構成文字 (半角英数字とアンダースコア) のみで構成され、かつ他の全てのマップに対して一意である必要があります。例: <code>holt_bridge</code></li>
-                    <li>マップの設定を収録するための空のアドオンを作成します。</li>
                     <li>ひとつのマップを構成するにあたり必要な「赤チームの拠点」「青チームの拠点」「戦闘域」を追加します。次の節以降で説明します。</li>
                 </ol>
             </section>
@@ -23,7 +23,7 @@ layout: nav
                 <ol class="letterpress indented">
                     <li>赤チームの拠点となるワークベンチを決め、そのタイルのロケーションを <code>ENVIRONMENT MODS</code> に追加します。</li>
                     <li>スポーン地点となる場所にゾーンを追加します。試合中はプレイヤーはこのゾーンの中心にリスポーンします。</li>
-                    <li>追加したゾーンのプロパティを開き、タグに <code>map=&lt;MapID&gt;,landscape=spawn,team=red</code>を追加します。<code>&lt;MapID&gt;</code> は先に決めたマップ ID で置き換えます。</li>
+                    <li>追加したゾーンのプロパティを開き、タグに <code>map=&lt;MapID&gt;,landscape=base,team=red</code>を追加します。<code>&lt;MapID&gt;</code> は先に決めたマップ ID で置き換えます。</li>
                 </ol>
                 <p class="letterpress"><img src="/assets/img/tsu-battle-foundation-add-spawn-zone.png" alt="" width="784" height="408"></p>
             </section>
@@ -64,7 +64,7 @@ layout: nav
             </section>
             <section class="topic">
                 <h1 class="letterpress accentuate-text">他のマップの追加</h1>
-                <p class="letterpress">他のマップを追加するには同じアドオンに同じ手順を繰り返し行います。<code>&lt;MapID&gt;</code> が重複しない限り追加できます。</p>
+                <p class="letterpress">他のマップを追加するにはこの手順を繰り返し行います。<code>&lt;MapID&gt;</code> が重複しない限り同じアドオンに追加できます。</p>
             </section>
         </div>
     </article>

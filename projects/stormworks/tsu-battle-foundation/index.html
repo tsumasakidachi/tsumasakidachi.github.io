@@ -11,12 +11,12 @@ layout: nav
         <div class="separated">
             <section class="topic">
                 <h1 class="letterpress accentuate-text">導入</h1>
-                <p class="letterpress">Steam Workshop から <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3332752160">TSU Battle Foundation</a>、<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3332752277">TSU Battle Locations</a> をサブスクライブします。</p>
+                <p class="letterpress">Steam Workshop から <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3332752160">TSU Battle Foundation</a> をサブスクライブします。カスタムマップを作成していない場合は <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3332752277">TSU Battle Locations</a> が必要です。</p>
             </section>
             <section class="topic">
                 <h1 class="letterpress accentuate-text">機能</h1>
                 <ul class="letterpress indented">
-                    <li><span class="accentuate-text">チーム割の自動化</span> 参加者を均等に 2 個のチームに割り振ります</li>
+                    <li><span class="accentuate-text">チーム割の自動化</span> 参加者を赤と青の 2 チームに任意の比で割り振ります</li>
                     <li><span class="accentuate-text"><a href="./create-map">カスタムマップ</a></span> リスポーン地点となるワークベンチと行動エリアのセットをユーザが作成でき、対戦ごとに使う戦場を変更できます。プレイヤーは各自のチームのワークベンチにリスポーンします</li>
                     <li><span class="accentuate-text">チケットカウンタ</span> ゲームバランシングのためのチケットを手動で記録します</li>
                     <li>
@@ -37,7 +37,7 @@ layout: nav
                 <h1 class="letterpress accentuate-text">一般的な使い方</h1>
                 <ol class="letterpress indented">
                     <li>[管理者] TSU Battle Foundation、TSU Battle Locations を有効にして新しいゲームを作成します</li>
-                    <li>[管理者] <code>?battle init map=&lt;MapID&gt;</code> で新しい対戦を開始します。自動でチーム割が行われ参加者が拠点にテレポートされます</li>
+                    <li>[管理者] <code>?battle init map=&lt;MapID&gt; ratio=&lt;RedNumber&gt;:&lt;BlueNumber&gt;</code> で新しい対戦を開始します。<code>&lt;MapID&gt;</code> はマップ ID、<code>&lt;RedNumber&gt;:&lt;BlueNumber&gt;</code> は各チームの人数比 (省略した場合 1:1) です。自動でチーム割が行われ参加者が拠点にテレポートされます</li>
                     <li><code>?ticket &lt;+Amount&gt;</code> でチームの初期チケットを設定します。これは代表者 1 人 (誰でもいい) が行います
                     <li><code>?ready</code> でチームの準備完了を通知します。取り消す場合は <code>?wait</code> を入力します</li>。これは代表者 1 人 (誰でもいい) が行います
                     <li>両チームの準備が完了したら対戦が開始されます</li>
