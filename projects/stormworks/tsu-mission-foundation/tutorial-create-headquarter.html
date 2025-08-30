@@ -1,113 +1,105 @@
 ---
     title: "拠点の作成"
-    layout: nav
+    layout: content
 ---
-<main>
-    <article class="separated">
-        <header class="separated">
-            <h1 class="accentuate-text">拠点の作成</h1>
-            <p>TSU Mission Foundation を使って拠点を作成する方法を説明します。このチュートリアルは Stormworks のアドオン エディタの操作に習熟した人向けに書かれています。</p>
-        </header>
-        <div class="separated">
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">拠点アドオンの作成</h1>
-                <p class="letterpress">最初に拠点を収録するアドオンを作成します。Stormworks を起動してカスタム モードで新規ゲームを開始します。アドオン エディタを開き、新しいアドオンを作成して任意の名前を付けて保存します。</p>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">拠点建物の作成</h1>
-                <p class="letterpress">拠点の建物としてアドオンに配置する乗り物を作成します。任意のワークベンチを開き、いい感じに建物を作成します。ボタンやキーパッドなどのブロックに以下の名前を付けて建物に設置すると、現在発生しているミッションのデータを最大 6 個まで Mission Foundation から取得できます。</p>
-                <table class="letterpress data bordered">
-                    <tbody>
-                        <tr>
-                            <td>ブロック</td>
-                            <td>名前 (大文字小文字問わず)</td>
-                            <td>入力される値</td>
-                        </tr>
-                        <tr>
-                            <td>Push Button</td>
-                            <td>alert</td>
-                            <td>ミッションが発生した瞬間に on</td>
-                        </tr>
-                        <tr>
-                            <td>Small Keypad</td>
-                            <td>mission_1_id</td>
-                            <td>1 個目のミッションの ID</td>
-                        </tr>
-                        <tr>
-                            <td>Small Keypad</td>
-                            <td>mission_1_x</td>
-                            <td>1 個目のミッションの x 座標</td>
-                        </tr>
-                        <tr>
-                            <td>Small Keypad</td>
-                            <td>mission_1_y</td>
-                            <td>1 個目のミッションの y 座標</td>
-                        </tr>
-                        <tr>
-                            <td>Small Keypad</td>
-                            <td>mission_1_r</td>
-                            <td>1 個目のミッションの捜索半径</td>
-                        </tr>
-                        <tr>
-                            <td>Small Keypad</td>
-                            <td>mission_1_rescuees</td>
-                            <td>1 個目のミッションの要救助者の数</td>
-                        </tr>
-                        <tr>
-                            <td>Small Keypad</td>
-                            <td>mission_1_fires</td>
-                            <td>1 個目のミッションの炎の数</td>
-                        </tr>
-                        <tr>
-                            <td>Small Keypad</td>
-                            <td>mission_2_id</td>
-                            <td>2 個目のミッションの ID</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">︙</td>
-                        </tr>
-                        <tr>
-                            <td>Small Keypad</td>
-                            <td>mission_6_fires</td>
-                            <td>6 個目のミッションの炎の数</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">拠点建物をアドオンに配置</h1>
-                <p class="letterpress">作成した拠点建物を Mission Foundation が認識して追跡できるように設定します。</p>
-                <ol class="letterpress indented">
-                    <li>先程作成したアドオンに <code>ENVIRONMENT MODS</code> を追加し、拠点を配置するタイルを選びます。名前を変更する必要はありません。</li>
-                    <li>オブジェクトの編集画面を開き、作成した建物を配置します。</li>
-                    <li>配置した建物の <code>Tags</code> に <code>tracker=headquarter</code> を追加します。</li>
-                    <li>必要に応じて固定や無敵の設定を行います。</li>
-                </ol>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">ゾーンの設定</h1>
-                <p class="letterpress">要救助者の搬送先となるゾーンを設定します。</p>
-                <ol class="letterpress indented">
-                    <li>先程配置した建物の位置・向き・サイズに合わせて重なるようにゾーンを配置します。</li>
-                    <li><code>Tags</code> に、目的に合わせて次のいずれか 1 個を選んで追加します。
-                        <ul class="indented">
-                            <li><code>landscape=base</code> (基地: CPA 再発の可能性のない要救助者を受け入れ可能)</li>
-                            <li><code>landscape=hospital</code> (病院: 全ての要救助者を受け入れ可能)</li>
-                        </ul></li>
-                    <li>Display Name を設定します。これはマップに表示されます。</li>
-                </ol>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">次のステップ</h1>
-                <p class="letterpress">これで拠点が作成できました。アドオンを保存して次のステップに進みます。<a href="./tutorial-starts-new-game-and-settings">アドオンの設定と新しいゲームの作成</a>で説明します。</p>
-            </section>
-        </div>
-    </article>
-    <div class="ad separated">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8562449254433662" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8562449254433662" data-ad-slot="9618575340"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+<article class="separated">
+    <header class="separated">
+        <h1 class="accentuate-text">拠点の作成</h1>
+        <p>TSU Mission Foundation を使って拠点を作成する方法を説明します。このチュートリアルは Stormworks のアドオン エディタの操作に習熟した人向けに書かれています。</p>
+    </header>
+    <div class="separated">
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">拠点アドオンの作成</h1>
+            <p class="letterpress">最初に拠点を収録するアドオンを作成します。Stormworks を起動してカスタム モードで新規ゲームを開始します。アドオン エディタを開き、新しいアドオンを作成して任意の名前を付けて保存します。</p>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">拠点建物の作成</h1>
+            <p class="letterpress">拠点の建物としてアドオンに配置する乗り物を作成します。任意のワークベンチを開き、いい感じに建物を作成します。ボタンやキーパッドなどのブロックに以下の名前を付けて建物に設置すると、現在発生しているミッションのデータを最大 6 個まで Mission Foundation から取得できます。</p>
+            <table class="letterpress data bordered">
+                <tbody>
+                    <tr>
+                        <td>ブロック</td>
+                        <td>名前 (大文字小文字問わず)</td>
+                        <td>入力される値</td>
+                    </tr>
+                    <tr>
+                        <td>Push Button</td>
+                        <td>alert</td>
+                        <td>ミッションが発生した瞬間に on</td>
+                    </tr>
+                    <tr>
+                        <td>Small Keypad</td>
+                        <td>mission_1_id</td>
+                        <td>1 個目のミッションの ID</td>
+                    </tr>
+                    <tr>
+                        <td>Small Keypad</td>
+                        <td>mission_1_x</td>
+                        <td>1 個目のミッションの x 座標</td>
+                    </tr>
+                    <tr>
+                        <td>Small Keypad</td>
+                        <td>mission_1_y</td>
+                        <td>1 個目のミッションの y 座標</td>
+                    </tr>
+                    <tr>
+                        <td>Small Keypad</td>
+                        <td>mission_1_r</td>
+                        <td>1 個目のミッションの捜索半径</td>
+                    </tr>
+                    <tr>
+                        <td>Small Keypad</td>
+                        <td>mission_1_rescuees</td>
+                        <td>1 個目のミッションの要救助者の数</td>
+                    </tr>
+                    <tr>
+                        <td>Small Keypad</td>
+                        <td>mission_1_fires</td>
+                        <td>1 個目のミッションの炎の数</td>
+                    </tr>
+                    <tr>
+                        <td>Small Keypad</td>
+                        <td>mission_2_id</td>
+                        <td>2 個目のミッションの ID</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">︙</td>
+                    </tr>
+                    <tr>
+                        <td>Small Keypad</td>
+                        <td>mission_6_fires</td>
+                        <td>6 個目のミッションの炎の数</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">拠点建物をアドオンに配置</h1>
+            <p class="letterpress">作成した拠点建物を Mission Foundation が認識して追跡できるように設定します。</p>
+            <ol class="letterpress indented">
+                <li>先程作成したアドオンに <code>ENVIRONMENT MODS</code> を追加し、拠点を配置するタイルを選びます。名前を変更する必要はありません。</li>
+                <li>オブジェクトの編集画面を開き、作成した建物を配置します。</li>
+                <li>配置した建物の <code>Tags</code> に <code>tracker=headquarter</code> を追加します。</li>
+                <li>必要に応じて固定や無敵の設定を行います。</li>
+            </ol>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">ゾーンの設定</h1>
+            <p class="letterpress">要救助者の搬送先となるゾーンを設定します。</p>
+            <ol class="letterpress indented">
+                <li>先程配置した建物の位置・向き・サイズに合わせて重なるようにゾーンを配置します。</li>
+                <li><code>Tags</code> に、目的に合わせて次のいずれか 1 個を選んで追加します。
+                    <ul class="indented">
+                        <li><code>landscape=base</code> (基地: CPA 再発の可能性のない要救助者を受け入れ可能)</li>
+                        <li><code>landscape=hospital</code> (病院: 全ての要救助者を受け入れ可能)</li>
+                    </ul></li>
+                <li>Display Name を設定します。これはマップに表示されます。</li>
+            </ol>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">次のステップ</h1>
+            <p class="letterpress">これで拠点が作成できました。アドオンを保存して次のステップに進みます。<a href="./tutorial-starts-new-game-and-settings">アドオンの設定と新しいゲームの作成</a>で説明します。</p>
+        </section>
     </div>
-</main>
+</article>
+

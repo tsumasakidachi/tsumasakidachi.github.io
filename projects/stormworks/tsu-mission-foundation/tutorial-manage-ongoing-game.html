@@ -1,49 +1,41 @@
 ---
     title: "コマンドを使用したゲームの進行と管理"
-    layout: nav
+    layout: content
 ---
-<main>
-    <article class="separated">
-        <header class="separated">
-            <h1 class="accentuate-text">コマンドを使用したゲームの進行と管理</h1>
-            <p>TSU Mission Foundation のコマンドを使用して進行中のゲームを管理する方法を説明します。</p>
-        </header>
-        <div class="separated">
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">ミッションの自動発生を開始する</h1>
-                <p class="letterpress">次のコマンドでミッションの自動発生を開始できます: <strong><code>?mission start</code></strong>。ゲームを開始しただけではミッションの自動発生は開始されず、このコマンドを入力する必要があります。これはマルチプレイヤー ゲームにおいてサーバが起動してから参加者のログインが終わるまでミッションの開始を待機できるようにするためです。</p>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">次のミッションを発生させる</h1>
-                <p class="letterpress">次のコマンドで次のミッションを発生できます: <strong><code>?mission next</code></strong>。これは次のミッションの発生タイミングを待たずに新しいランダム ミッションを発生させる時に使います。</p>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">特定のミッションを指定して開始する</h1>
-                <p class="letterpress">次のコマンドで特定のミッションを開始できます: <strong><code>?mission init &lt;string&gt;</code></strong>。<code>&lt;string&gt;</code> は作成したミッション ロケーションの名前で置き換えます。例としてチュートリアルで作成したミッションを発生させるコマンドは <code>?mission init mission:Container_house_on_fire!</code> となります。このコマンドはミッションの自動発生が開始されていなくてもミッションを発生させられます。</p>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">特定の現在進行中のミッションを途中で打ち切る</h1>
-                <p class="letterpress">次のコマンドで特定のミッションを途中で終了できます: <strong><code>?mission close &lt;number&gt;</code></strong>。<code>&lt;number&gt;</code> はミッション番号で置き換えます。このミッションに関係するオブジェクトが全て消去され、達成済みの目標の報酬が精算されます。</p>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">特定の現在進行中のミッションを指定して消去する</h1>
-                <p class="letterpress">次のコマンドで特定のミッションを消去できます: <strong><code>?mission clear &lt;number&gt;</code></strong>。<code>&lt;number&gt;</code> はミッション番号で置き換えます。このミッションに関係するオブジェクトが単純に全て消去され、報酬は精算されません。</p>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">全ての現在進行中のミッションを消去する</h1>
-                <p class="letterpress">次のコマンドで特定のミッションを消去できます: <strong><code>?mission clear-all</code></strong>。</p>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">ミッションの自動発生を停止する</h1>
-                <p class="letterpress">次のコマンドでミッションの自動発生を停止できます: <strong><code>?mission stop</code></strong></p>
-            </section>
-        </div>
-    </article>
-    <div class="ad separated">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8562449254433662" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8562449254433662" data-ad-slot="9618575340"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+<article class="separated">
+    <header class="separated">
+        <h1 class="accentuate-text">コマンドを使用したゲームの進行と管理</h1>
+        <p>TSU Mission Foundation のコマンドを使用して進行中のゲームを管理する方法を説明します。</p>
+    </header>
+    <div class="separated">
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">ミッションの自動発生を開始する</h1>
+            <p class="letterpress">次のコマンドでミッションの自動発生を開始できます: <strong><code>?mission start</code></strong>。ゲームを開始しただけではミッションの自動発生は開始されず、このコマンドを入力する必要があります。これはマルチプレイヤー ゲームにおいてサーバが起動してから参加者のログインが終わるまでミッションの開始を待機できるようにするためです。</p>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">次のミッションを発生させる</h1>
+            <p class="letterpress">次のコマンドで次のミッションを発生できます: <strong><code>?mission next</code></strong>。これは次のミッションの発生タイミングを待たずに新しいランダム ミッションを発生させる時に使います。</p>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">特定のミッションを指定して開始する</h1>
+            <p class="letterpress">次のコマンドで特定のミッションを開始できます: <strong><code>?mission init &lt;string&gt;</code></strong>。<code>&lt;string&gt;</code> は作成したミッション ロケーションの名前で置き換えます。例としてチュートリアルで作成したミッションを発生させるコマンドは <code>?mission init mission:Container_house_on_fire!</code> となります。このコマンドはミッションの自動発生が開始されていなくてもミッションを発生させられます。</p>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">特定の現在進行中のミッションを途中で打ち切る</h1>
+            <p class="letterpress">次のコマンドで特定のミッションを途中で終了できます: <strong><code>?mission close &lt;number&gt;</code></strong>。<code>&lt;number&gt;</code> はミッション番号で置き換えます。このミッションに関係するオブジェクトが全て消去され、達成済みの目標の報酬が精算されます。</p>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">特定の現在進行中のミッションを指定して消去する</h1>
+            <p class="letterpress">次のコマンドで特定のミッションを消去できます: <strong><code>?mission clear &lt;number&gt;</code></strong>。<code>&lt;number&gt;</code> はミッション番号で置き換えます。このミッションに関係するオブジェクトが単純に全て消去され、報酬は精算されません。</p>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">全ての現在進行中のミッションを消去する</h1>
+            <p class="letterpress">次のコマンドで特定のミッションを消去できます: <strong><code>?mission clear-all</code></strong>。</p>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">ミッションの自動発生を停止する</h1>
+            <p class="letterpress">次のコマンドでミッションの自動発生を停止できます: <strong><code>?mission stop</code></strong></p>
+        </section>
     </div>
-</main>
+</article>
+

@@ -1,74 +1,66 @@
 ---
     title: "基本的なレスキュー ミッションの作成"
-    layout: nav
+    layout: content
 ---
-<main>
-    <article class="separated">
-        <header class="separated">
-            <h1 class="accentuate-text">基本的なレスキュー ミッションの作成</h1>
-            <p>TSU Mission Foundation を使って基本的なレスキュー ミッションを作成する方法を説明します。要救助者と炎を達成目標としてスクリプトに認識させ、ミッションが成立するようにします。このチュートリアルは Stormworks のアドオン エディタの操作に習熟した人向けに書かれています。</p>
-        </header>
-        <div class="separated">
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">ミッション アドオンの作成</h1>
-                <p class="letterpress">最初に自作ミッションを収録するアドオンを作成します。Stormworks を起動してカスタム モードで新規ゲームを開始します。アドオン エディタを開き、新しいアドオンを作成して任意の名前を付けて保存します。</p>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">病院の設定</h1>
-                <p class="letterpress">作成したアドオンに要救助者の搬送先である病院を追加します。これはマップの任意の場所に病院を示すゾーンを設定する事で実現します。既存の建物の中でも何もない草原でも、場所に関わらずどこにでもいくつでも設定できます。</p>
-                <ol class="letterpress indented">
-                    <li>病院を設定するロケーションをアドオンに追加します。<code>ENVIRONMENT MODS</code> のロケーション選択画面を開き、任意のタイルを選択します。</li>
-                    <!-- <div class="letterpress"><img src="https://imagedelivery.net/4msCx1LmgaFWheG_H8nJQQ/12191a30-8a9b-49c4-f1df-38a5493f3100/post" class="stretch" alt="" width="784" height="477"/></div> -->
-                    <li>追加したロケーションの編集画面を開き、病院を設定する場所にゾーンを配置し、位置・向き・サイズを目的の建物等の形状に合わせて整えます。</li>
-                    <li>配置したゾーンのプロパティを開き、<strong><code>Tags</code> に <code>landscape=hospital</code> を追加します</strong>。マップへの表示はスクリプトによって行われるため <code>Show on map</code> をチェックする必要はありません。</li>
-                    <li>Display Name を入力します。これはマップに表示されます。何も入力しない場合は <code>landscape</code> タグの値が使用されます。</li>
-                </ol>
-                <p class="letterpress">以上で病院の設定は完了です。以下の画像に例を示します。</p>
-                <div class="letterpress"><img src="/assets/img/tsu-mission-foundation-set-hospital.png" class="stretch" alt="" width="784" height="495" /></div>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">ミッション ロケーションの作成</h1>
-                <p class="letterpress">ゲーム内で発生するミッションを作成します。</p>
-                <ol class="letterpress indented">
-                    <li>ミッションのロケーションをアドオンに追加します。<code>MISSION LOCATIONS</code> のロケーション選択画面を開き、ミッションの発生場所となるタイルを選択します。<strong>固定位置に発生するミッションを作成するため  <code>OCEAN</code> 以外のタイルを選択します</strong>。</li>
-                    <li>追加したロケーションに次の書式で名前を付けます: <code>mission:&lt;message&gt;</code>。&lt;message&gt; はミッションの内容を説明するメッセージで置き換えます。これには半角スペースを含めることができないため、代わりに <code>_</code> (アンダースコア) を使います。これはミッションが発生した時にマップやポップアップに表示されます。アンダースコアは半角スペースに変換されます。</li>
-                </ol>
-                <div class="letterpress"><img src="/assets/img/tsu-mission-foundation-add-mission-location.png" class="stretch" alt="" width="784" height="400" /></div>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">要救助者の追加</h1>
-                <p class="letterpress">作成したミッション ロケーションに要救助者を追加します。要救助者は達成目標としてスクリプトによって追跡され、病院へ到着した時にデスポーンし、報酬が計上されます。</p>
-                <ol class="letterpress indented">
-                    <li>作成したミッション ロケーションの編集画面を開き、要救助者を配置する場所に移動します。</li>
-                    <li>好きなだけキャラクターを配置します。</li>
-                    <li>要救助者として取り扱うキャラクターのプロパティを開き、<strong><code>Tags</code> に <code>tracker=rescuee</code> を追加します</strong>。駆け付けた警官や野次馬など病院へ搬送する必要のないモブにはタグを付けません。</li>
-                </ol>
-                <div class="letterpress"><img src="/assets/img/tsu-mission-foundation-add-rescuee.png" class="stretch" alt="" width="784" height="442" /></div>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">炎の追加</h1>
-                <p class="letterpress">作成したミッション ロケーションに炎を追加します。炎は達成目標としてスクリプトによって追跡され、消えた時にデスポーンし、報酬が計上されます。</p>
-                <ol class="letterpress indented">
-                    <li>作成したミッション ロケーションの編集画面を開き、炎を配置したい場所に移動します。</li>
-                    <li>好きなだけ炎を配置します。</li>
-                </ol>
-                <p class="letterpress">以上です。炎にはタグを追加する必要はありません。</p>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">その他のオブジェクトの追加</h1>
-                <p class="letterpress">必要に応じて乗り物や動物を配置します。これらの達成目標でないオブジェクトはミッションが終了した時に自動的にデスポーンします。</p>
-            </section>
-            <section class="topic">
-                <h1 class="letterpress accentuate-text">次のステップ</h1>
-                <p class="letterpress">これで基本的なミッションが作成できました。アドオンを保存して次のステップに進みます。<a href="./tutorial-create-headquarter">拠点の作成</a>で説明します。</p>
-            </section>
-        </div>
-    </article>
-    <div class="ad separated">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8562449254433662" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8562449254433662" data-ad-slot="9618575340"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+<article class="separated">
+    <header class="separated">
+        <h1 class="accentuate-text">基本的なレスキュー ミッションの作成</h1>
+        <p>TSU Mission Foundation を使って基本的なレスキュー ミッションを作成する方法を説明します。要救助者と炎を達成目標としてスクリプトに認識させ、ミッションが成立するようにします。このチュートリアルは Stormworks のアドオン エディタの操作に習熟した人向けに書かれています。</p>
+    </header>
+    <div class="separated">
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">ミッション アドオンの作成</h1>
+            <p class="letterpress">最初に自作ミッションを収録するアドオンを作成します。Stormworks を起動してカスタム モードで新規ゲームを開始します。アドオン エディタを開き、新しいアドオンを作成して任意の名前を付けて保存します。</p>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">病院の設定</h1>
+            <p class="letterpress">作成したアドオンに要救助者の搬送先である病院を追加します。これはマップの任意の場所に病院を示すゾーンを設定する事で実現します。既存の建物の中でも何もない草原でも、場所に関わらずどこにでもいくつでも設定できます。</p>
+            <ol class="letterpress indented">
+                <li>病院を設定するロケーションをアドオンに追加します。<code>ENVIRONMENT MODS</code> のロケーション選択画面を開き、任意のタイルを選択します。</li>
+                <!-- <div class="letterpress"><img src="https://imagedelivery.net/4msCx1LmgaFWheG_H8nJQQ/12191a30-8a9b-49c4-f1df-38a5493f3100/post" class="stretch" alt="" width="784" height="477"/></div> -->
+                <li>追加したロケーションの編集画面を開き、病院を設定する場所にゾーンを配置し、位置・向き・サイズを目的の建物等の形状に合わせて整えます。</li>
+                <li>配置したゾーンのプロパティを開き、<strong><code>Tags</code> に <code>landscape=hospital</code> を追加します</strong>。マップへの表示はスクリプトによって行われるため <code>Show on map</code> をチェックする必要はありません。</li>
+                <li>Display Name を入力します。これはマップに表示されます。何も入力しない場合は <code>landscape</code> タグの値が使用されます。</li>
+            </ol>
+            <p class="letterpress">以上で病院の設定は完了です。以下の画像に例を示します。</p>
+            <div class="letterpress"><img src="/assets/img/tsu-mission-foundation-set-hospital.png" class="stretch" alt="" width="784" height="495" /></div>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">ミッション ロケーションの作成</h1>
+            <p class="letterpress">ゲーム内で発生するミッションを作成します。</p>
+            <ol class="letterpress indented">
+                <li>ミッションのロケーションをアドオンに追加します。<code>MISSION LOCATIONS</code> のロケーション選択画面を開き、ミッションの発生場所となるタイルを選択します。<strong>固定位置に発生するミッションを作成するため  <code>OCEAN</code> 以外のタイルを選択します</strong>。</li>
+                <li>追加したロケーションに次の書式で名前を付けます: <code>mission:&lt;message&gt;</code>。&lt;message&gt; はミッションの内容を説明するメッセージで置き換えます。これには半角スペースを含めることができないため、代わりに <code>_</code> (アンダースコア) を使います。これはミッションが発生した時にマップやポップアップに表示されます。アンダースコアは半角スペースに変換されます。</li>
+            </ol>
+            <div class="letterpress"><img src="/assets/img/tsu-mission-foundation-add-mission-location.png" class="stretch" alt="" width="784" height="400" /></div>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">要救助者の追加</h1>
+            <p class="letterpress">作成したミッション ロケーションに要救助者を追加します。要救助者は達成目標としてスクリプトによって追跡され、病院へ到着した時にデスポーンし、報酬が計上されます。</p>
+            <ol class="letterpress indented">
+                <li>作成したミッション ロケーションの編集画面を開き、要救助者を配置する場所に移動します。</li>
+                <li>好きなだけキャラクターを配置します。</li>
+                <li>要救助者として取り扱うキャラクターのプロパティを開き、<strong><code>Tags</code> に <code>tracker=rescuee</code> を追加します</strong>。駆け付けた警官や野次馬など病院へ搬送する必要のないモブにはタグを付けません。</li>
+            </ol>
+            <div class="letterpress"><img src="/assets/img/tsu-mission-foundation-add-rescuee.png" class="stretch" alt="" width="784" height="442" /></div>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">炎の追加</h1>
+            <p class="letterpress">作成したミッション ロケーションに炎を追加します。炎は達成目標としてスクリプトによって追跡され、消えた時にデスポーンし、報酬が計上されます。</p>
+            <ol class="letterpress indented">
+                <li>作成したミッション ロケーションの編集画面を開き、炎を配置したい場所に移動します。</li>
+                <li>好きなだけ炎を配置します。</li>
+            </ol>
+            <p class="letterpress">以上です。炎にはタグを追加する必要はありません。</p>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">その他のオブジェクトの追加</h1>
+            <p class="letterpress">必要に応じて乗り物や動物を配置します。これらの達成目標でないオブジェクトはミッションが終了した時に自動的にデスポーンします。</p>
+        </section>
+        <section class="topic">
+            <h1 class="letterpress accentuate-text">次のステップ</h1>
+            <p class="letterpress">これで基本的なミッションが作成できました。アドオンを保存して次のステップに進みます。<a href="./tutorial-create-headquarter">拠点の作成</a>で説明します。</p>
+        </section>
     </div>
-</main>
+</article>
+

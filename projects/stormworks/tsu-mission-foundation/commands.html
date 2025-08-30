@@ -1,92 +1,84 @@
 ---
     title: "コマンド"
-    layout: nav
+    layout: content
 ---
-<main>
-    <article class="separated">
-        <header class="separated">
-            <h1 class="accentuate-text">コマンド</h1>
-        </header>
-        <div class="separated">
-            <table class="data bordered">
-                <tbody>
-                    <tr>
-                        <td>?mission list</td>
-                        <td>ミッション ロケーションの一覧を表示する。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission start</td>
-                        <td>新しいランダム ミッションの自動発生を開始する。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission stop</td>
-                        <td>新しいランダム ミッションの自動発生を停止する。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission next</td>
-                        <td>次のミッションの発生タイミングを待たずに新しいランダム ミッションを発生させる。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission close &lt;number&gt;</td>
-                        <td>現在進行中のミッション &lt;number&gt; を報酬を精算して終了する。諦めるとも言う。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission limit-count</td>
-                        <td>設定に基づいてミッションが同時に発生する数を制限するかどうかを切り替える。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission limit-range</td>
-                        <td>設定に基づいてミッションが発生する範囲を制限するかどうかを切り替える。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission init &lt;string&gt;</td>
-                        <td>名前 &lt;string&gt; を指定して新しいミッションを開始する。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission clear &lt;number&gt;</td>
-                        <td>現在進行中のミッション &lt;number&gt; を報酬を精算せず単に消去する。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission clear-all</td>
-                        <td>現在進行中のミッション全てを報酬を精算せず単に消去する。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission clear-history</td>
-                        <td>ミッションの履歴を消去する。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission gather &lt;number&lt;</td>
-                        <td>現在進行中のミッション &lt;number&gt; の全ての要救助者を自分の位置にテレポートさせる。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission prod</td>
-                        <td>Mission Foundation を製品モードに切り替える。</td>
-                    </tr>
-                    <tr>
-                        <td>?mission debug</td>
-                        <td>Mission Foundation をデバッグ モードに切り替える。ゾーンとオブジェクトの位置がマップに表示されるようになり、詳細ログが出力される。</td>
-                    </tr>
-                    <tr>
-                        <td><del>?mission map mission</del></td>
-                        <td><del>現在進行中のミッションの捜索円と進捗状況を地図に表示するかどうかを切り替える。</del></td>
-                    </tr>
-                    <tr>
-                        <td><del>?mission map objective</del></td>
-                        <td><del>現在進行中のミッションの目標物の位置を地図に表示するかどうかを切り替える。</del></td>
-                    </tr>
-                    <tr>
-                        <td><del>?mission map zone</del></td>
-                        <td><del>ミッション ゾーンの位置を地図に表示するかどうかを切り替える。</del></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </article>
-    <div class="ad separated">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8562449254433662" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8562449254433662" data-ad-slot="9618575340"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+<article class="separated">
+    <header class="separated">
+        <h1 class="accentuate-text">コマンド</h1>
+    </header>
+    <div class="separated">
+        <table class="data bordered">
+            <tbody>
+                <tr>
+                    <td>?mission list</td>
+                    <td>ミッション ロケーションの一覧を表示する。</td>
+                </tr>
+                <tr>
+                    <td>?mission start</td>
+                    <td>新しいランダム ミッションの自動発生を開始する。</td>
+                </tr>
+                <tr>
+                    <td>?mission stop</td>
+                    <td>新しいランダム ミッションの自動発生を停止する。</td>
+                </tr>
+                <tr>
+                    <td>?mission next</td>
+                    <td>次のミッションの発生タイミングを待たずに新しいランダム ミッションを発生させる。</td>
+                </tr>
+                <tr>
+                    <td>?mission close &lt;number&gt;</td>
+                    <td>現在進行中のミッション &lt;number&gt; を報酬を精算して終了する。諦めるとも言う。</td>
+                </tr>
+                <tr>
+                    <td>?mission limit-count</td>
+                    <td>設定に基づいてミッションが同時に発生する数を制限するかどうかを切り替える。</td>
+                </tr>
+                <tr>
+                    <td>?mission limit-range</td>
+                    <td>設定に基づいてミッションが発生する範囲を制限するかどうかを切り替える。</td>
+                </tr>
+                <tr>
+                    <td>?mission init &lt;string&gt;</td>
+                    <td>名前 &lt;string&gt; を指定して新しいミッションを開始する。</td>
+                </tr>
+                <tr>
+                    <td>?mission clear &lt;number&gt;</td>
+                    <td>現在進行中のミッション &lt;number&gt; を報酬を精算せず単に消去する。</td>
+                </tr>
+                <tr>
+                    <td>?mission clear-all</td>
+                    <td>現在進行中のミッション全てを報酬を精算せず単に消去する。</td>
+                </tr>
+                <tr>
+                    <td>?mission clear-history</td>
+                    <td>ミッションの履歴を消去する。</td>
+                </tr>
+                <tr>
+                    <td>?mission gather &lt;number&lt;</td>
+                    <td>現在進行中のミッション &lt;number&gt; の全ての要救助者を自分の位置にテレポートさせる。</td>
+                </tr>
+                <tr>
+                    <td>?mission prod</td>
+                    <td>Mission Foundation を製品モードに切り替える。</td>
+                </tr>
+                <tr>
+                    <td>?mission debug</td>
+                    <td>Mission Foundation をデバッグ モードに切り替える。ゾーンとオブジェクトの位置がマップに表示されるようになり、詳細ログが出力される。</td>
+                </tr>
+                <tr>
+                    <td><del>?mission map mission</del></td>
+                    <td><del>現在進行中のミッションの捜索円と進捗状況を地図に表示するかどうかを切り替える。</del></td>
+                </tr>
+                <tr>
+                    <td><del>?mission map objective</del></td>
+                    <td><del>現在進行中のミッションの目標物の位置を地図に表示するかどうかを切り替える。</del></td>
+                </tr>
+                <tr>
+                    <td><del>?mission map zone</del></td>
+                    <td><del>ミッション ゾーンの位置を地図に表示するかどうかを切り替える。</del></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-</main>
+</article>
+

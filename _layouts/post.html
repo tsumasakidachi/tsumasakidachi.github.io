@@ -1,20 +1,5 @@
 ---
-layout: nav
+layout: content
 ---
-<main>
-    <article class="separated">
-        <header class="separated">
-            <h1><span class="accentuate-text">{{ page.title }}</span><br />{{ page.category | upcase }}</h1>
-            <p>{{ page.author }}</p>
-            <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y/%m/%d" }}</time></p>
-        </header>
-        <section class="separated markdown"> {{ content }} </section>
-    </article>
-    <div class="ad separated">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8562449254433662" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8562449254433662" data-ad-slot="9618575340"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-</main>
+
+<section class="separated markdown"> {{ content }} </section>
