@@ -3,18 +3,9 @@ layout: default
 ---
 <div class="container stack-panel vertical">
     <div class="stack-panel-item stretch">
-        <p class="blurb">「夢を乗せたツバサが導くままに」</p>
+        <p class="blurb text-block">「夢を乗せたツバサが導くままに」</p>
     </div>
     <div class="stack-panel-item">
-        <div class="text-block stack-panel">
-            <p class="stack-panel-item title-text"><a href="/">{{ site.title }}</a></p>
-            <div class="stack-panel-item">┃</div>
-            <ul class="stack-panel">
-                <li class="stack-panel-item"><a href="https://www.youtube.com/@tsumasakidachi">YouTube</a></li>
-                <li class="stack-panel-item"><a href="https://x.com/tmskdch">X</a></li>
-                <li class="stack-panel-item"><a href="https://github.com/tsumasakidachi">GitHub</a></li>
-            </ul>
-        </div>
-        <p class="text-block caption-text">&copy; project tsumasakidachi</p>
+        {% include_relative _layouts/footer.html %}
     </div>
 </div>
